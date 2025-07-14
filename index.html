@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter the Matrix</title>
+  <style>
+    html, body {
+      margin: 0;
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      text-align: center;
+      height: 100%;
+      overflow: hidden;
+    }
+    #intro, #matrix-canvas {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #matrix-canvas {
+      display: none;
+    }
+    button {
+      font-size: 20px;
+      padding: 12px 20px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+    }
+    #red { background: #b00; color: white; }
+    #blue { background: #008; color: white; }
+    img {
+      width: 200px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px #0f0);
+    }
+  </style>
+</head>
+<body>
+  <div id="intro">
+    <img src="rabbit-hole.png" alt="Rabbit Hole" />
+    <p>Follow the white rabbit...</p>
+    <div>
+      <button id="red">🟥 Red Pill</button>
+      <button id="blue">🟦 Blue Pill</button>
+    </div>
+  </div>
+  <canvas id="matrix-canvas"></canvas>
+  <audio id="matrix-sound" preload="auto">
+    <source src="matrix.wav" type="audio/mpeg">
+  </audio>
+  <script src="matrix.js"></script>
+</body>
+</html>
